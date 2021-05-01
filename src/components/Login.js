@@ -4,7 +4,7 @@ import Api from '../helper/api';
 import Button from './Button';
 import InputBox from './InputBox';
 
-const Screen1 = props => {
+const Login = props => {
   const [phoneNumber, setphoneNumber] = useState(props.phoneNumber || '');
   const [countryCode, setcountryCode] = useState(props.countryCode || '+91');
   const [showError, setshowError] = useState(false);
@@ -95,4 +95,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Screen1;
+export default Login;

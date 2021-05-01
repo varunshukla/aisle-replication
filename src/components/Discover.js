@@ -14,7 +14,7 @@ import {first, forEach} from 'lodash';
 import CustomButton from './Button';
 import Api from '../helper/api';
 
-const Screen3 = props => {
+const Discover = props => {
   const {token} = props.route.params;
 
   const [invites, setinvites] = useState(null);
@@ -212,4 +212,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Screen3;
+export default Discover;

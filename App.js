@@ -4,14 +4,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Screen1 from './src/components/Screen1';
-import Screen2 from './src/components/Screen2';
-import Screen3 from './src/components/Screen3';
+import Login from './src/components/Login';
+import OtpVerify from './src/components/OtpVerify';
+import Discover from './src/components/Discover';
+import Notes from './src/components/Notes';
 
 import DiscoverIcon from './src/assets/images/4.svg';
 import NotesIcon from './src/assets/images/1.svg';
 import MatchesIcon from './src/assets/images/2.svg';
 import ProfileIcon from './src/assets/images/3.svg';
+import Matches from './src/components/Matches';
+import Profile from './src/components/Profile';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -53,14 +56,14 @@ const DiscoverTab = () => {
         activeTintColor: 'tomato',
         inactiveTintColor: 'gray',
       }}>
-      <Tab.Screen name="screen3" component={Screen3} />
-      <Tab.Screen name="notes" component={Screen3} options={{tabBarBadge: 3}} />
+      <Tab.Screen name="screen3" component={Discover} />
+      <Tab.Screen name="notes" component={Notes} options={{tabBarBadge: 3}} />
       <Tab.Screen
         name="matches"
-        component={Screen3}
+        component={Matches}
         options={{tabBarBadge: 30}}
       />
-      <Tab.Screen name="profile" component={Screen3} />
+      <Tab.Screen name="profile" component={Profile} />
     </Tab.Navigator>
   );
 };
@@ -76,8 +79,8 @@ const App = () => {
           headerBackTitleVisible: false,
           headerTitle: 'Aisle replication',
         })}>
-        <Stack.Screen name="screen1" component={Screen1} />
-        <Stack.Screen name="screen2" component={Screen2} />
+        <Stack.Screen name="screen1" component={Login} />
+        <Stack.Screen name="screen2" component={OtpVerify} />
         <Stack.Screen name="discovertab" component={DiscoverTab} />
       </Stack.Navigator>
     </NavigationContainer>

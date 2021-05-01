@@ -16,7 +16,7 @@ import CustomButton from './Button';
 import InputBox from './InputBox';
 
 const editImage = require('../assets/images/pencil.png');
-const Screen2 = props => {
+const OtpVerify = props => {
   const {countryCode, phoneNumber} = props.route.params;
 
   const [otp, setotp] = useState(null);
@@ -165,4 +165,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Screen2;
+export default OtpVerify;
